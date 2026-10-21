@@ -1,0 +1,5 @@
+{"id":"en-1","lang":"en","question":"What have I been reading lately?","now":"2026-09-09","gold_role":"constraint","gold_mode":"recent","gold_width":"medium","expr_type":"implicit"}
+{"id":"en-2","lang":"en","question":"Which city was Jon visiting on 28 January 2023?","now":"2023-07-24","gold_role":"constraint","gold_mode":"anchored","gold_center":"2023-01-28","gold_width":"exact","expr_type":"explicit"}
+{"id":"en-3","lang":"en","question":"Who did Gina team up with during February 2023?","now":"2023-07-24","gold_role":"constraint","gold_mode":"range","gold_span":["2023-02-01","2023-02-28"],"gold_width":"medium","expr_type":"explicit"}
+{"id":"en-4","lang":"en","question":"When did Caroline go to the LGBTQ support group?","now":"2023-10-23","gold_role":"target","gold_mode":"none","gold_width":"exact","expr_type":"explicit"}
+{"id":"en-5","lang":"en","question":"What did Caroline attend in early May 2023?","now":"2023-10-23","gold_role":"constraint","gold_mode":"anchored","gold_center":"2023-05-05","gold_width":"narrow","expr_type":"vague"}

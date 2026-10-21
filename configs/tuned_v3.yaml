@@ -1,0 +1,13 @@
+# TQ-Mem v3 parameters for runs outside LoCoMo (LongMemEval etc.). These are the values every one of the 8 leave-one-conversation-out
+# folds of configs/tuned_cv.json converged to on LoCoMo test (tune_cv, 2026-09-15): min-max normalised s_sem within the candidates,
+# kernel width x2, and a weak kernel weight beta = 0.3 (anchored) / 0.1 (range, recent). Not tuned on any LongMemEval item.
+# Use with the v3 systems: rag+tq:nt.fq.nowin / mem0+tq:nt.fq (no semantic floor, full-question retrieval, no candidate window).
+_source: configs/tuned_cv.json (all 8 folds identical), LoCoMo test, 2026-09-15
+sem_norm: minmax
+width_scale: 2.0
+h_recent: null
+weights:
+  none: [1.0, 0.0]
+  recent: [0.9, 0.1]
+  range: [0.9, 0.1]
+  anchored: [0.7, 0.3]

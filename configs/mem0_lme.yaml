@@ -1,0 +1,23 @@
+# mem0 Memory.from_config() format (LongMemEval store; separate qdrant path and collection from configs/mem0.yaml).
+# LLM = family A (GPT-5.6 Luna) through the OpenAI-compatible path of bedrock-runtime (/openai/v1).
+# The Bedrock API key is taken from AWS_BEARER_TOKEN_BEDROCK or generated from boto3 credentials (tqmem.mem0_adapter.build_mem0).
+# To use an OpenAI-compatible gateway instead, set openai_base_url to $LLM_GATEWAY_URL/v1; the key is read from LLM_GATEWAY_KEY.
+llm:
+  provider: openai
+  config:
+    model: global.openai.gpt-5.6-luna
+    openai_base_url: https://bedrock-runtime.us-east-1.amazonaws.com/openai/v1
+    # GPT-5.6 rejects max_tokens / top_p / any temperature != 1. mem0's name heuristic does not
+    # recognise 'global.openai.gpt-5.6-luna', so opt in explicitly: mem0 then sends only messages + response_format.
+    is_reasoning_model: true
+embedder:
+  provider: huggingface
+  config:
+    model: BAAI/bge-large-en-v1.5
+vector_store:
+  provider: qdrant              # local on-disk store (qdrant-client comes with mem0ai)
+  config:
+    collection_name: tqmem_lme
+    path: .mem0_qdrant_lme
+    on_disk: true
+    embedding_model_dims: 1024   # BAAI/bge-large-en-v1.5

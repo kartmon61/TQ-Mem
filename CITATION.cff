@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the thesis below."
+title: "TQ-Mem: Query-Adaptive Temporal Kernel Retrieval for Long-Term LLM Agent Memory"
+type: software
+authors:
+  - family-names: Lee
+    given-names: Jinho
+repository-code: "https://github.com/kartmon61/TQ-Mem"
+license: MIT
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's thesis"
+  title: "Time as a First-Class Query Dimension: Query-Adaptive Temporal Kernel Retrieval for Long-Term LLM Agent Memory"
+  authors:
+    - family-names: Lee
+      given-names: Jinho
+  year: 2026

@@ -1,0 +1,3 @@
+question_id,question,now,role,mode,center,span_start,span_end,width,note
+x1,What did Caroline attend in early May 2023?,2023-10-23,constraint,anchored,2023-05-05,,,narrow,
+x2,When did Caroline go to the LGBTQ support group?,2023-10-23,target,none,,,,exact,

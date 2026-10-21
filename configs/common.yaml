@@ -1,0 +1,12 @@
+# Shared experiment settings. Model strings follow tqmem.llm.make_llm (bedrock:/openai:/vllm:/gateway:/mock).
+embedder: BAAI/bge-large-en-v1.5          # fixed for all systems
+# Both LLM families run on Amazon Bedrock via the Converse API (boto3 credentials).
+# OpenAI models on bedrock-runtime require a cross-Region inference profile ID (us. or global. prefix).
+# Any OpenAI-compatible endpoint works too, e.g. `gateway:gpt-5.6-luna` with LLM_GATEWAY_URL / LLM_GATEWAY_KEY in .env.
+llm_family_A: bedrock:global.openai.gpt-5.6-luna@us-east-1
+llm_family_B: bedrock:us.anthropic.claude-haiku-4-5-20251001-v1:0@us-east-1
+judge_llm: bedrock:global.openai.gpt-5.6-luna@us-east-1      # one judge for every system
+k: 10
+dev_ids: [conv-26, conv-30]
+seed: 42
+runs_tq: 3                          # extra runs for rag+tq and mem0+tq

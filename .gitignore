@@ -1,0 +1,28 @@
+# secrets
+.env
+
+# benchmark data (fetch with scripts/download_data.py)
+data/locomo10.json
+data/longmemeval_s.json
+data/*.part
+data/.cache/
+
+# run outputs, local stores and caches
+results/
+logs/
+reports/
+.mem0_qdrant*/
+.mem0_ledger*/
+.emb_cache/
+.temb_cache/
+.cache/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

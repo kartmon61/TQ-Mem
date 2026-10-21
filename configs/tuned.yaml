@@ -1,0 +1,43 @@
+_dev_modes:
+  anchored: 2
+  none: 28
+_log:
+- 'width_scale=0.5: 1.0000'
+- 'width_scale=1.0: 1.0000'
+- 'width_scale=2.0: 1.0000'
+- 'beta[anchored]=0.3: 1.0000'
+- 'beta[anchored]=0.5: 1.0000'
+- 'beta[anchored]=0.7: 1.0000'
+- 'beta[range]=0.3: 1.0000'
+- 'beta[range]=0.5: 1.0000'
+- 'beta[range]=0.7: 1.0000'
+- 'beta[recent]=0.3: 1.0000'
+- 'beta[recent]=0.5: 1.0000'
+- 'beta[recent]=0.7: 1.0000'
+- 'theta_sem=0.3: 1.0000'
+- 'theta_sem=0.5: 1.0000'
+- 'theta_sem=0.7: 1.0000'
+_note: '2026-09-14: objective saturated (recall@10 = 1.000 for every grid point).
+  Two causes: (1) LME evidence is session-level (Memory.id = session id, ~10 turns/session)
+  so any turn of the gold session counts as a hit; (2) 28/30 dev questions extract
+  to mode=none (LongMemEval temporal-reasoning asks to reason about time, it rarely
+  states a time constraint), so the kernel is never engaged. All ties keep the design
+  defaults -> this file equals the Chapter-3 default table. Treat as untuned until
+  a discriminative dev set / finer metric is agreed.'
+_source: lme temporal dev 30 (seed 42)
+provisional: false
+theta_sem: 0.5
+weights:
+  anchored:
+  - 0.4
+  - 0.6
+  none:
+  - 1.0
+  - 0.0
+  range:
+  - 0.5
+  - 0.5
+  recent:
+  - 0.7
+  - 0.3
+width_scale: 1.0

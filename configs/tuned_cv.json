@@ -1,0 +1,289 @@
+{
+ "method": "leave-one-conversation-out on LoCoMo test, objective recall@10 (RAG store, no theta, full question, no window)",
+ "source_extractions": "results/e1/rag+tq_bedrock_us.openai.gpt-5.6-luna_us-east-1_test_run1.jsonl",
+ "grid": {
+  "width_scale": [
+   0.5,
+   1.0,
+   2.0
+  ],
+  "beta": [
+   0.1,
+   0.3,
+   0.5,
+   0.7
+  ],
+  "h_recent": [
+   14,
+   30,
+   60,
+   90
+  ],
+  "sem_norm": [
+   "raw",
+   "minmax"
+  ]
+ },
+ "default": {
+  "width_scale": 1.0,
+  "weights": {
+   "none": [
+    1.0,
+    0.0
+   ],
+   "recent": [
+    0.7,
+    0.3
+   ],
+   "range": [
+    0.5,
+    0.5
+   ],
+   "anchored": [
+    0.4,
+    0.6
+   ]
+  },
+  "h_recent": null,
+  "sem_norm": "raw"
+ },
+ "folds": {
+  "conv-41": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.814,
+   "heldout_recall10": 0.8485,
+   "heldout_default_recall10": 0.5758,
+   "n_heldout": 33
+  },
+  "conv-42": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.7962,
+   "heldout_recall10": 0.9459,
+   "heldout_default_recall10": 0.6757,
+   "n_heldout": 37
+  },
+  "conv-43": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.8148,
+   "heldout_recall10": 0.8438,
+   "heldout_default_recall10": 0.5,
+   "n_heldout": 32
+  },
+  "conv-44": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.821,
+   "heldout_recall10": 0.7895,
+   "heldout_default_recall10": 0.5789,
+   "n_heldout": 19
+  },
+  "conv-47": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.8157,
+   "heldout_recall10": 0.8387,
+   "heldout_default_recall10": 0.6452,
+   "n_heldout": 31
+  },
+  "conv-48": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.8341,
+   "heldout_recall10": 0.7097,
+   "heldout_default_recall10": 0.7419,
+   "n_heldout": 31
+  },
+  "conv-49": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.8263,
+   "heldout_recall10": 0.7714,
+   "heldout_default_recall10": 0.5143,
+   "n_heldout": 35
+  },
+  "conv-50": {
+   "params": {
+    "width_scale": 2.0,
+    "weights": {
+     "none": [
+      1.0,
+      0.0
+     ],
+     "recent": [
+      0.9,
+      0.1
+     ],
+     "range": [
+      0.9,
+      0.1
+     ],
+     "anchored": [
+      0.7,
+      0.3
+     ]
+    },
+    "h_recent": null,
+    "sem_norm": "minmax"
+   },
+   "train_recall10": 0.8257,
+   "heldout_recall10": 0.7667,
+   "heldout_default_recall10": 0.4667,
+   "n_heldout": 30
+  }
+ },
+ "pooled": {
+  "heldout_recall10": 0.8185,
+  "heldout_default_recall10": 0.5887,
+  "n": 248
+ }
+}
